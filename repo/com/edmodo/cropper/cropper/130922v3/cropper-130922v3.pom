@@ -9,25 +9,25 @@
     <version>130922v3</version>
     <packaging>apklib</packaging>
     <name>cropper</name>
-
+    
     <distributionManagement>
         <repository>
             <id>repo</id>
             <url>https://github.com/juyeong/maven-repo/raw/master/repo</url>
         </repository>
     </distributionManagement>
-
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
+        
         <!-- Plugins -->
         <android-maven-plugin.version>3.6.0</android-maven-plugin.version>
         <api.platform>16</api.platform>
-
+        
         <!-- Dependencies -->
         <android.version>4.1.1.4</android.version>
     </properties>
-
+    
     <dependencies>
         <dependency>
             <groupId>com.google.android</groupId>
@@ -36,7 +36,7 @@
             <version>${android.version}</version>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>
@@ -52,5 +52,5 @@
             </plugin>
         </plugins>
     </build>
-
+    
 </project>
