@@ -3,11 +3,10 @@
   <groupId>com.edmodo.cropper</groupId>
   <artifactId>cropper</artifactId>
   <versioning>
-    <release>130922v2</release>
+    <release>130922v3</release>
     <versions>
-      <version>130922</version>
-      <version>130922v2</version>
+      <version>130922v3</version>
     </versions>
-    <lastUpdated>20131006145100</lastUpdated>
+    <lastUpdated>20131006145836</lastUpdated>
   </versioning>
 </metadata>
