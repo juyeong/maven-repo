@@ -6,28 +6,29 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.edmodo.cropper</groupId>
     <artifactId>cropper</artifactId>
-    <version>130922v3</version>
+    <version>130922</version>
     <packaging>apklib</packaging>
     <name>cropper</name>
-    
+
     <distributionManagement>
         <repository>
             <id>repo</id>
             <url>https://github.com/juyeong/maven-repo/raw/master/repo</url>
         </repository>
     </distributionManagement>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        
+
         <!-- Plugins -->
         <android-maven-plugin.version>3.6.0</android-maven-plugin.version>
+        <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <api.platform>16</api.platform>
-        
+
         <!-- Dependencies -->
         <android.version>4.1.1.4</android.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>com.google.android</groupId>
@@ -36,21 +37,42 @@
             <version>${android.version}</version>
         </dependency>
     </dependencies>
-    
+
     <build>
+        <sourceDirectory>src</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>${android-maven-plugin.version}</version>
+                    <extensions>true</extensions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
         <plugins>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <version>${android-maven-plugin.version}</version>
                 <configuration>
                     <sdk>
                         <platform>${api.platform}</platform>
                     </sdk>
                 </configuration>
             </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-    
+
 </project>
