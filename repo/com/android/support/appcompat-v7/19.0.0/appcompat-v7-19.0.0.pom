@@ -5,13 +5,4 @@
   <groupId>com.android.support</groupId>
   <artifactId>appcompat-v7</artifactId>
   <version>19.0.0</version>
-  <packaging>aar</packaging>
-  <dependencies>
-    <dependency>
-      <groupId>com.android.support</groupId>
-      <artifactId>support-v4</artifactId>
-      <version>19.0.0</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
 </project>
